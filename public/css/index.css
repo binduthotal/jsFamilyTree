@@ -1,0 +1,175 @@
+body{
+  /* background-image: linear-gradient(to bottom right, rgb(25, 84, 99) , rgb(159, 211, 224)); */
+  background-color: rgb(26, 24, 24);
+  /* background-color: #5f939a; */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  overflow: auto;
+  }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  #backgroundImg{
+    bottom: -40px;
+    opacity: 0.4;
+    margin-left: -130px;
+  }
+  .header{
+    text-align: center;
+    margin-top: 20px;
+  }
+ #logo{
+   width: 80px;
+ }
+ #firebaseui-auth-container{
+  margin-top: 10px;
+  }
+
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  #backgroundImg{
+    bottom: -40px;
+    margin-left: -80px;
+    opacity: 0.4;
+    width: 50%;
+  }
+  #logo{
+    width: 80px;
+  }
+  #firebaseui-auth-container{
+    margin-top: 50px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .header{
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  #backgroundImg{
+    bottom: -70px;
+    margin-left: -100px;
+    /* width: 50%; */
+    opacity: 0.4;
+  }
+  #logo{
+    width: 80px;
+  }
+  #firebaseui-auth-container{
+    margin-top: 50px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .header{
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+  #backgroundImg{
+    bottom: -40px;
+    margin-left: -130px;
+    width: 50%;
+    opacity: 0.4;
+  }
+  .header{
+    margin-top: 20px;
+    text-align: center;
+  }
+  #logo{
+   width: 80px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  #firebaseui-auth-container{
+    margin-top: 50px;
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+#backgroundImg{
+    bottom: -50px;
+    margin-left: -130px;
+    width: 45%;
+    opacity: 0.4;
+  }
+  .header{
+    margin-top: 20px;
+    text-align: center;
+  }
+  #logo{
+    /* position: absolute; */
+    /* left: 320px; */
+    /* top: 20px; */
+    width: 80px;
+    /* height: 10px; */
+  }
+  h1{
+    font-size: 40px;
+  }
+  #firebaseui-auth-container{
+    margin-top: 50px;
+    }
+}
+
+
+ 
+
+  h1{
+  text-align: center;
+  font-family: 'roboto' ,arial ,sans-serif;
+  }
+
+  form{
+  background-color: #fff;
+  border: 5px solid rgb(80, 80, 80);
+  }
+
+  h1.firebaseui-title{
+  color: black;
+  }
+  .mdl-textfield__label.firebaseui-label{
+  color: goldenrod;
+  }
+
+  .mdl-textfield__label.firebaseui-label::after{
+  color: goldenrod;
+  }
+
+  input.mdl-textfield__input.firebaseui-input.firebaseui-id-email{
+  border-radius: 0;
+  color: black;
+  direction: ltr;
+  font-size: 16px;
+  width: 100%;
+  }
+
+  input.mdl-textfield__input.firebaseui-id-password.firebaseui-input {
+  color: black;
+  }
+
+  .firebaseui-id-secondary-link.firebaseui-button.mdl-button.mdl-js-button.mdl-button--primary{
+  color: rgb(53, 51, 51);
+  }
+
+  .firebaseui-id-submit.firebaseui-button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored{
+  background-color: rgb(53, 51, 51);
+  }
+
+  .firebaseui-id-submit.firebaseui-button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored:hover{
+    background-color: rgb(80, 80, 80);
+  }

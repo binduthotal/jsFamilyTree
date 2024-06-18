@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Family tree</title>
+    <link rel="icon" type=image/svg+xml href="imgs/NewSRLogo.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+<body>
+    <div class="header">
+        <img id=logo src="imgs/GoldenSRLogoWithBorder.svg" width="100px">
+        <h1>Welcome to Family Tree</h1>
+    </div>
+   
+    <img  id="backgroundImg" src="imgs/tree.png" style="position: fixed;">
+    <img class=logo1 src="imgs/NewGoldenSRLogoWithOutBorder.svg" width="10%" style="position: fixed; opacity: 0.4; bottom: 0; right: 0;">
+
+
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+   
+    <script src='scripts/fireBaseLink.js'></script>
+    <script src='scripts/index.js'></script>
+    
+</body>
+</html>

@@ -1,0 +1,1327 @@
+body {
+  margin: 0;
+  background-color: rgb(26, 24, 24);
+  overflow:auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: 150%;
+  background-position-x: 50%, center;
+  }
+  
+  /* Media Query for Large screens */
+  @media (min-width: 1281px) {
+   #backgroundImg{
+   opacity: 0.4;
+   margin-left: -100px;
+   bottom: -40px;   
+   }
+   .dropdown {
+    left: 20px;
+   }
+  #search-button{
+    left: 90px;
+  }
+  .btn-expand{
+    left: 160px;
+  }
+  .btn-collapse{
+    left: 160px;
+  }
+  .btn-center{
+    left: 230px
+  }
+  }
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #backgroundImg{
+      opacity: 0.4;
+      margin-left: -100px;
+      bottom: -40px;   
+      }  
+      body{
+        /* overflow: scroll; */
+      }
+      .dropdown {
+        left: 20px;
+       }
+      #search-button{
+        left: 90px;
+      }
+      .btn-expand{
+        left: 160px;
+      }
+      .btn-collapse{
+        left: 160px;
+      }
+      .btn-center{
+        left: 230px
+      }
+  }
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #backgroundImg{
+      opacity: 0.4;
+      margin-left: -170px;
+      bottom: -70px;  
+      width: 100%; 
+      }    
+      body{
+        /* overflow: scroll; */
+      }
+      .logo{
+        display: none;
+      }
+      .dropdown{
+        left: 20px;
+      }
+      #search-button{
+        left: 90px;
+      }
+      .btn-expand{
+        left: 160px;
+      }
+      .btn-collapse{
+        left: 160px;
+      }
+      .btn-center{
+        left: 230px
+      }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    #backgroundImg{
+      opacity: 0.4;
+      margin-left: -90px;
+      bottom: -40px;  
+      width: 40%; 
+      }    
+    body{
+      /* overflow: scroll; */
+    }
+    .logo{
+      display: none;
+    }
+    .dropdown {
+      left: 20px;
+     }
+     #search-button{
+      left: 90px;
+    }
+    .btn-expand{
+      left: 160px;
+    }
+    .btn-collapse{
+      left: 160px;
+    }
+    .btn-center{
+      left: 230px
+    }
+  }
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  @media (min-width: 481px) and (max-width: 767px){
+    #backgroundImg{
+      opacity: 0.4;
+      margin-left: -50px;
+      bottom: -20px;  
+      width: 40%; 
+      }     
+      body{
+        /* overflow: scroll; */
+      } 
+      .logo{
+        display: none;
+      }
+      .dropdown {
+        left: 20px;
+       }
+       #search-button{
+        left: 90px;
+      }
+      .btn-expand{
+        left: 160px;
+      }
+      .btn-center{
+        left: 230px
+      }
+  }
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  @media (max-width: 480px) {
+    #backgroundImg{
+      opacity: 0.4;
+      margin-left: -20px;
+      bottom: -10px;  
+      width: 40%; 
+      }   
+      body{
+        /* overflow: scroll; */
+      }  
+      .logo{
+        display: none;
+      }
+      .dropdown {
+        left: 20px;
+       }
+      #search-button{
+        left: 90px;
+      }
+      .btn-expand{
+        left: 160px;
+      }
+      .btn-collapse{
+        left: 160px;
+      }
+      .btn-center{
+        left: 230px
+      }
+  }
+  
+  
+  /* ***************** PRELOADER ******************* */
+  #profileLoader{
+  margin: auto;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  }
+  #pLoader{
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  margin: -76px 0 0 -76px;
+  
+  }
+  #loader {
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  /* margin: -76px 0 0 -76px; */
+  /* margin: auto; */
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid goldenrod;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+  }
+  
+  .full-container {
+  font-family: "Gill Sans", sans-serif;
+  width: fit-content;
+  }
+  
+  h1 {
+  text-align: center;
+  font-size: 30px;
+  color: whitesmoke;
+  font-family: "Gill Sans", sans-serif;
+  }
+  
+  /* ############################### svg css ########################### */
+  
+  svg{
+  /* margin: 0; */
+  overflow: auto;
+  }
+  
+  .hide-rect{
+  visibility: hidden;
+  }
+  
+  .childHyperLink{
+  fill: #d8ac9c;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: underline;
+  }
+  
+  .nodeHasChildren {
+  fill: whitesmoke;
+  fill-opacity: 0.4;
+  }
+  
+  .nodeDoesNotHaveChildren {
+  fill: whitesmoke;
+  fill-opacity: 0.4;
+  
+  }
+  
+  .nodeRepresentsCurrentUser {
+  stroke: rgb(25, 84, 99);
+  stroke-width: 3;
+  }
+  .link {
+  fill: none;
+  stroke: rgb(24, 75, 85);
+  stroke: white;
+  stroke-width: 3px;
+  }
+  .node {
+  fill: white;
+  }
+  .node-collapse {
+  stroke: rgb(24, 75, 85);
+  }
+  .node-collapse-right-rect {
+  fill: whitesmoke;
+  fill-opacity: 0.5;
+  stroke: white;
+  }
+  .node circle {
+  fill: #555;
+  stroke: white;
+  
+  }
+  #eidtProfileBtn{
+  background-color: black;
+  fill: rgb(24, 75, 85);
+  font-size: 15px;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  border: 2px solid rgb(24, 75, 85);
+  cursor: pointer;
+  }
+  
+  #editProfileBtn:hover{
+  fill: black;
+  }
+  .node text {
+  font-weight: bold;
+  text-anchor: right;
+  }
+  .node-group .name {
+  font-family: "Gill Sans", sans-serif;
+  text-decoration: underline;
+  font-size: 14px;
+  fill: white;
+  
+  }
+  .node-group .spouse-text {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+  fill: white;
+  }
+  .node-group .spouse-name {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+  fill: white;
+  text-decoration: underline;
+  cursor: pointer;
+  }
+  
+  .node-group .child-count{
+  font-family: "Gill Sans", sans-serif;
+  font-size: 13px;
+  margin-right: 300px;
+  fill: white;
+  
+  }
+  .node-group .child-icon {
+  font-size: 25px;
+  fill: white;
+  }
+  
+  /* ############################# Menu drop down button ############################################*/
+  .dropdown {
+  top: 25px;
+  position: fixed;
+  display: inline-block;
+  }
+  
+  .dropbtn {
+  font-size: 20px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  color: goldenrod;
+  background-color: rgb(53, 51, 51);
+  border-radius: 100%;
+  font-weight: bold;
+  }
+  
+  .dropdown-content {
+    text-align: center;
+      display: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      position: fixed;
+      background-color: #f1f1f1;
+      width: fit-content;
+      /* width: 130px; */
+      left: 10;
+      /* margin-left: -30px; */
+      top: 70px;
+      z-index: 100;
+  }
+  
+  .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: black;
+  color: goldenrod;
+  }
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(80, 80, 80);}
+  
+  /* *********************************** search Button **************************************** */
+  
+  .btn-search{
+  position: fixed;
+  display: inline;
+  border-radius: 100%;
+  background-color: rgb(53, 51, 51);
+  width: 45px;
+  height: 45px; 
+  top: 25px;
+  font-size: 20px;
+  border: none;
+  color: goldenrod;
+  }
+  
+  #search-button:hover {
+  background-color: rgb(80, 80, 80);
+  }
+  
+  /* *********************************** User Display Name **************************************** */
+  
+  .cUser{
+  /* top:15px; */
+  position: absolute;
+  right: 25px;
+  }
+  
+  #displayName{
+  text-align: right;
+  font-size: 20px;
+  color: white;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
+  display: inline;
+  }
+  
+  /* *********************************** LogOut Button **************************************** */
+  
+  #logout-button {
+  font-size: 25px;
+  padding: 20px;
+  color: black;
+  border: none;
+  background-color:transparent;
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+  }
+  
+  #logout-button:hover{
+  background-color: rgb(159, 211, 224);
+  }
+  
+  /* ############################# btn action class ############################################*/
+  
+  .btn-action {
+  position: absolute;
+  height: 26px;
+  color: white;
+  background-color: rgb(25, 84, 99);
+  border: 1px solid black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  }
+  
+  .btn-action:hover {
+  background-color: #1f2b86;
+  }
+  
+  .btn-action i {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  }
+  
+  .btn-action .icon {
+  background-color: whitesmoke;
+  border-radius: 11px;
+  }
+  
+  .btn-action .icon:hover{
+  background-color: #d8ac9c;
+  }
+  
+  /* ############################# Button To Center ############################################*/
+  
+  .btn-center {
+  top: 25px;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  border-radius: 100%;
+  padding: 5px;
+  cursor: pointer;
+  color: goldenrod;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  background-color: rgb(53, 51, 51);
+  border: none;
+  }
+  
+  .btn-center:hover {
+  background-color: rgb(80, 80, 80);
+  /* border-radius: 100px;; */
+  }
+  
+  /* ############################# Button To Expand ############################################*/
+  
+  .btn-expand {
+  top: 25px;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: rgb(53, 51, 51);
+  cursor: pointer;
+  color: goldenrod;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  border: none;
+  }
+  
+  .btn-expand:hover {
+  background-color: rgb(80, 80, 80);
+  border-radius: 50px;
+  }
+  
+  /* ############################# Button To Collapse ############################################*/
+  
+  .btn-collapse {
+    text-align: center;
+    top: 25px;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: rgb(53, 51, 51);
+    cursor: pointer;
+    color: goldenrod;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:"Gill Sans", sans-serif;
+    }
+    
+    .btn-collapse:hover {
+    background-color: rgb(80, 80, 80);
+    }
+    
+  /* ############################### Search box ########################### */
+  .user-search-box {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  width: 0;
+  background-color: white;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  font-family:"Gill Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  }
+  
+  ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: black;
+  opacity: 1;
+  }
+  
+  :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: black;
+  opacity: 0.5;
+  }
+  
+  ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: white;
+  opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  opacity: 0.5;
+  }
+  
+  .user-search-box .input-box {
+  width: 100%;
+  top: 0;
+  background-color: rgb(53, 51, 51);
+  }
+  
+  .user-search-box .close-button-wrapper i {
+  margin: 10px;
+  margin-left: 9%;
+  font-size: 30px;
+  color: white;
+  }
+  
+  .user-search-box input {
+  color: black !important;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid ;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
+  caret-color: black;
+  }
+  
+  .user-search-box input:focus {
+  border-bottom: 1px solid rgb(25, 84, 99);
+  box-shadow: 0 1px 0 0 black;
+  }
+  
+  .user-search-box .result-header {
+  background-color: white;
+  font-weight: 700;
+  padding: 12px;
+  color: black;
+  border-top: 2px solid #d3e8e5;
+  border-bottom: 1px solid #d3e8e5;
+  }
+  
+  .user-search-box .result-list {
+  position: absolute;
+  max-height: 100%;
+  min-width: 400px;
+  border-color: grey;
+  overflow: auto;
+  }
+  
+  .user-search-box .buffer {
+  width: 100%;
+  height: 200px;
+  }
+  
+  .user-search-box .list-item {
+  clear: both;
+  background-color: white;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #d3e8e5;
+  }
+  
+  .user-search-box .list-item a {
+  display: inline;
+  margin: 0;
+  }
+  
+  .user-search-box .list-item .description {
+  padding: 15px;
+  padding-left: 5px;
+  float: left;
+  width: 200px;
+  }
+  
+  .user-search-box .list-item .buttons {
+  padding: 15px;
+  padding-left: 0px;
+  float: left;
+  width: auto;
+  }
+  
+  .user-search-box .list-item .description .name {
+  text-align: middle;
+  font-size: 15px;
+  color: #59525b;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  }
+  
+  .user-search-box .list-item .description .gender {
+  text-align: middle;
+  color: #59525b;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+  }
+  
+  .user-search-box .list-item .description .area {
+  color: #91a4a5;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+  }
+  .user-search-box .list-item .btn-locate{
+  background-color: rgb(53, 51, 51);
+  border-radius: 10px;
+  color: white;
+  margin-top:30px;
+  }
+  
+  .user-search-box .btn-locate:hover {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  }
+  
+  .user-search-box .list-item .btn-search-box{
+  font-size:10px;
+  }
+  
+  .user-search-box .close-button-wrapper i:hover {
+  color: black;
+  cursor: pointer;
+  }
+  
+  .user-search-box .input-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  }
+  
+  .user-search-box .input-bottom-placeholder {
+  margin-top: -16px;
+  color: whitesmoke;
+  letter-spacing: 1px;
+  }
+  
+  /* ############################### Tooltip css ########################### */
+  .img-close-btn{
+  color: white;
+  position: absolute;
+  left: 340px;
+  font-size: 24px;
+  margin-top: 1px;
+  }
+  .divProfileImage{
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  }
+  
+  .customTooltip-wrapper {
+  font-family: "Gill Sans", sans-serif;
+  opacity: 0;
+  /* NEW */
+  display: none;
+  position: absolute;
+  }
+  
+  #overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 0;
+  cursor: pointer;
+  }
+  
+  .customTooltip {
+  background-color: whitesmoke;
+  border:2px solid goldenrod;
+  color: rgb(24, 75, 85);
+  position: absolute;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+  overflow: auto;
+  cursor: all-scroll;
+  }
+  
+  .tooltip-desc .close-btn {
+  margin-top: 8px;
+  cursor: pointer;
+  margin-right: 20px;
+  text-align: right;
+  font-size: 20px;
+  }
+  
+  .tooltip-desc {
+  overflow:auto;
+  }
+  
+  .toolTipImg{
+  margin-top: 25px;
+  margin-left: 10px;
+  float: left;
+  position: relative;
+  border: 2px solid lightgray;
+  }
+  .details{
+  padding-left: 250px;
+  margin-top: 30px;
+  }
+  
+  .tooltip-desc .name {
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-decoration: none;
+  }
+  
+  .tooltip-desc .gender {
+  margin-top: 10px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-decoration: none;
+  }
+  
+  .tooltip-desc .spouse {
+  font-weight: bolder;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  }
+  .tooltip-desc .spouse-name {
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 0px;
+  font-weight: bold;
+  }
+  .tooltip-desc .children {
+  margin-top: 5px;
+  font-weight: bolder;
+  font-size: 17px;
+  text-decoration: none;
+  }
+  
+  .tooltip-desc .children-name {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 1px;
+  font-weight: bold;
+  }
+  
+  #btn-details-box {
+  margin-top: -10px;
+  margin-left: 20px;
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  color:white;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  }
+  
+  #btn-details-box:hover {
+  background-color: rgb(80, 80, 80);
+  }
+  
+  /* ######################## Add Spouse, Add CHild ######################*/
+  
+  #sBox{
+  background-color: whitesmoke;
+  position: absolute;
+  text-align: left;
+  right: 0;
+  width: 415px;
+  height: 300px;
+  outline: 1px solid goldenrod;
+  outline-offset: -27px;
+  }
+  
+  .add-spouse {
+  overflow: hidden;
+  position: absolute;
+  left: 600px;
+  /* right: 0; */
+  top: 250px;
+  width: 0;
+  background-color: whitesmoke;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: 1px solid rgb(24, 75, 85);
+  outline-offset: -27px;
+  box-shadow: 0 0 10px black;
+  }
+  
+  .add-spouse .close-button i {
+  margin: 2px;
+  margin-left: 3px;
+  padding: 5px;
+  font-size: 20px;
+  color: rgb(24, 75, 85);
+  cursor: pointer;
+  }
+  
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(24, 75, 85);
+  border-radius: 4px;
+  resize: vertical;
+  }
+  .add-spouse .col-25{
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  color: rgb(24, 75, 85);
+  float: left;
+  margin-left: 25px;
+  padding: 10px;
+  
+  }
+  
+  .personName{
+  margin: -1px
+  }
+  
+  .add-spouse .col-75 {
+  font-family: "Gill Sans", sans-serif;
+  float: left;
+  margin-left: 20px;
+  padding: 10px;
+  color: rgb(24, 75, 85);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  #cBox{
+  background-color: whitesmoke;
+  position: absolute;
+  text-align: left;
+  right: 0;
+  width: 415px;
+  height: 350px;
+  outline: 1px solid goldenrod;
+  outline-offset: -27px;
+  }
+  
+  .add-child {
+  box-shadow: 0 0 10px black;
+  overflow: hidden;
+  position: absolute;
+  left: 600px;
+  /* right: 0; */
+  top: 250px;
+  width: 0;
+  background-color: whitesmoke;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: 1px solid goldenrod;
+  outline-offset: -27px;
+  }
+  
+  .add-child .close-button i {
+  margin: 2px;
+  margin-left: 3px;
+  padding: 5px;
+  font-size: 20px;
+  color: rgb(24, 75, 85);
+  cursor: pointer;
+  }
+  .add-child .col-25{
+  font-family: "Gill Sans", sans-serif;
+  color: rgb(24, 75, 85);
+  font-weight: bold;
+  float: left;
+  margin-left: 25px;
+  padding: 10px;
+  
+  }
+  
+  .required {
+  color: red;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 25px;
+  }
+  
+  .add-child .col-75 {
+  font-family: "Gill Sans", sans-serif;
+  float: left;
+  margin-left: 20px;
+  padding: 10px;
+  color: rgb(24, 75, 85);
+  }
+  
+  ::placeholder {
+  color: grey;
+  opacity: 1; /* Firefox */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  .submit-btn{
+  margin-top: 15px;
+  margin-left: 180px;
+  background-color: rgb(53, 51, 51);
+  border-style: solid;
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  color:white;
+  outline: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  }
+  
+  .submit-btn:hover {
+  background-color: rgb(80, 80, 80);
+  }
+  
+  /* ************************************************** Popup container ************************************ */
+  .popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext1 {
+  visibility: hidden;
+  width: 150px;
+  background-color: yellow;
+  border-color: rgb(24, 75, 85);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 440px;
+  right: 100px;
+  }
+  
+  .popup .requiredPopup{
+  position: relative;
+  background-color: yellow;
+  border-color: rgb(24, 75, 85);
+  color: red;
+  text-align: center;
+  }
+  
+  .popup .popuptext2 {
+  width: 150px;
+  background-color: yellow;
+  border-color: rgb(24, 75, 85);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 480px;
+  right: 70px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  }
+  
+  .popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  }
+  
+  /* ************************************************** View Profile container ************************************ */
+
+  .divProfile{
+ /* opacity: 0; */
+ display: none;
+ font-family: "Gill Sans", sans-serif;
+ /* background-color: whitesmoke; */
+ border: 2px solid goldenrod;
+ color: rgb(24, 75, 85);
+ position: absolute;
+ text-align: left;
+ padding-bottom: 20px;
+ height: 500px;
+ cursor: all-scroll;
+ resize: both;
+ overflow: auto;
+ box-sizing: border-box;
+}
+
+#profileBox{
+ background-color: whitesmoke;
+ position: fixed;
+ text-align: left;
+ height: 500px;
+overflow: auto;
+padding-bottom: 45px;
+}
+  
+  .close-btn {
+  margin-top: 8px;
+  cursor: pointer;
+  margin-right: 30px;
+  text-align: right;
+  margin-bottom: -10px;
+  font-size: 20px;
+  }
+  .profiletooltip-desc {
+  padding-left: 230px;
+  overflow: auto;
+  padding-right: 20px;
+  }
+  .box {
+  padding: 0.5em;
+  width: 100%;
+  margin:0.5em;
+  }
+  
+  .box-2 {
+  padding: 0.5em;
+  width: calc(100%/2 - 1em);
+  }
+  
+  .options label,
+  .options input{
+  width:4em;
+  padding:0.5em 1em;
+  }
+  .btn{
+  background:white;
+  color:black;
+  border:1px solid black;
+  padding: 0.5em 1em;
+  text-decoration:none;
+  margin:0.8em 0.3em;
+  display:inline-block;
+  cursor:pointer;
+  }
+  
+  .hide {
+  display: none;
+  }
+  
+  .cropped{
+  border: 2px solid black;
+  }
+  .img-div{
+  margin-left: 10px;
+  position: absolute;
+  margin-top: 20px;
+  }
+  
+  .img-btn-div{
+  margin-left: 30px;
+  width: 130px;
+  margin-top: 12px;
+  
+  }
+  .custom-file-upload {
+  font-family: "Gill Sans", sans-serif;
+  border: 1px solid gray;
+  display: inline-block;
+  padding: 3px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  }
+  #file-input{
+  margin-left: 50px;
+  width: 90px;
+  display: none;
+  border: #d8ac9c;
+  }
+  
+  .person-details-row{
+  display: flex;
+  margin: 1.5em 0;
+  width: fit-content;
+  height: fit-content;
+  /* margin-left: -15px; */
+  margin-right: -15px;
+  }
+  
+  .coln-25 {
+    /* margin-left: 20px; */
+    /* float: left; */
+    font-weight: bold;
+    width: 104px;
+  }
+  .coln-75 {
+    margin-left: 15px;
+    /* margin-left: auto; */
+    /* width: fit-content; */
+  }
+  .coln-75 p{
+    margin: 0;
+  }
+  .coln-55 {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    /* position: absolute; */
+    margin-left: -30px;
+  }
+  
+  .dob-row {
+    /* margin-bottom: 20px; */
+  }
+  
+  .bloodGrp-row {
+    /* margin-bottom: 20px;
+    margin-top: 20px; */
+  }
+  
+  .phone-row {
+    /* margin-bottom: 10px; */
+  }
+  .edit-btn {
+    margin-left: 10px;
+    border: none;
+    text-decoration: underline;
+    color: blue;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .save-btn {
+    margin-top: 11px;
+  }
+  
+  
+  #editProfile-btn{
+  background-color: rgb(53, 51, 51);
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  color:white;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  }
+  
+  #saveProfile-btn{
+  background-color: rgb(53, 51, 51);
+  padding: 7px;
+  border-radius: 10px;
+  color:white;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  margin-left: 30px;
+  border: none;
+  font-family: "Gill Sans", sans-serif;
+  }
+  
+  #editProfile-btn:hover{
+  background-color: rgb(80, 80, 80);
+  }
+  #saveProfile-btn:hover{
+  background-color: rgb(80, 80, 80);
+  }

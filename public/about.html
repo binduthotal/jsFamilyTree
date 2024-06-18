@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <!-- <meta charset='utf-8'> -->
+    <!-- <meta name="viewport" content="width=device-width" initial-scale=1.0 maximum-scale=12.0 minimum-scale=.25, user-scalable=yes> -->
+
+  <title>Seepareddy family tree</title>
+  <link rel="icon" type=image/svg+xml href="imgs/GoldenSRLogoWithBorder.svg">
+  <link rel="stylesheet" href="css/about.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+
+</head>
+
+<body onload=onWindowLoad()>
+  <img id="backgroundImg" src="imgs/tree.png" style="position: fixed;">
+  <img class=logo1 src="imgs/NewGoldenSRLogoWithOutBorder.svg" width="10%"
+    style="position: fixed; opacity: 0.4; bottom: 0; right: 0;">
+
+  <!-- Menu DropDown Button -->
+  <div class="dropdown">
+    <button class="dropbtn">☰</button>
+    <div class="dropdown-content">
+      <a href="home.html" class="panelOptions" title="Home" target="_self">Home</a>
+      <a href="userProfile.html" class="panelOptions" title="user profile" target="_self">My Account</a>
+      <a href="about.html" class="panelOptions" title="About" target="_self">About</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=seepareddy.in@gmail.com" class="panelOptions"
+        title="Contact" target="_blank">Contact</a>
+      <a href="#" id="logout-button " class="panelOptions" role="button" onclick="logOut()">Logout</a>
+    </div>
+  </div>
+  <!--     
+  </div> -->
+
+  <h1>About Family</h1>
+  <div class="cUser">
+    <p id="displayName"></p>
+  </div>
+
+  <div class="radhiniContainer">
+    <h3>FAMILY TREE</h3>
+    <h4>Family Name : *******</h4>
+    <h4>Gothram : *****</h4>
+    <h4>Community : *****</h4>
+    <h4>Ancestors Origin : <b>****</b> Village of ***** mandal<br \><br \>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      (since February 1980 settled in ****** till date July 2021).</h4>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I Radhini Seepareddy belong to sixth
+      generation of this family tree.
+      I uploaded the family tree generation details
+      in this website based on the details recorded in the book "***** Vamshavruksham" collected and published on
+      by
+      Mr. ****** ****** ***** a member of fifth generation who is currently based at **** village of
+      ***** mandal,
+      ***** District.<br \><br \>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like 
+      to thank Mr. ***** heart fully for taking great effort and
+      passion in meeting many people and spend many years to gather the family tree details of various
+      generations.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would also like to thank 
+      Mrs.**** and Mr. ***** and other family members
+      who helped me in designing and hosting this website</h4>
+    <h4>NOTE: As our family grows tree details has to be updated. This is possible with your inputs. Help us in adding
+      the family member details under the tree.</h4>
+    <h4>For furthur queries please contact : <b>*****@gmail.com</b></h4>
+    <h3 style="text-align: center;">Thank you</h3>>
+    <div class="container1" style="display: flex;">
+      <div class="container2" style="margin-left: 0; padding-left: 30px;">
+      </div>
+      <div class="container3" style="width: 150px;"></div>
+      <div class="container4">
+        <h5>Yours</h5>
+        <h2>*****</h2>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="scripts/fireBaseLink.js"></script>
+  <script src="scripts/about.js"></script>
+
+</body>
+
+</html>

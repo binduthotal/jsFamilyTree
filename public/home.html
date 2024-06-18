@@ -1,0 +1,141 @@
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 maximum-scale=12.0 minimum-scale=.25, user-scalable=yes>
+
+    <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-152.png">
+<!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="196x196" href="icon-196.png">
+
+
+    <title>Family Tree</title>
+    <link rel="icon" type=image/svg+xml href="imgs/GoldenSRLogoWithBorder.svg">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</head>
+
+<body onload="onWindowLoad()">
+
+    
+    <!-- Background Tree Image  -->
+    <img id="backgroundImg" src="imgs/tree.png" style="position: fixed;">
+
+    <!-- Footer Background Logo -->
+    <img class="logo1" src="imgs/NewGoldenSRLogoWithOutBorder.svg" width="10%"
+        style="position: fixed; opacity: 0.4; bottom: 0; right: 0;">
+
+    <!-- Tree Preloader -->
+    <div id="loader"></div>
+
+    <!-- Full Container -->
+    <div id="full-container" class="animate-bottom" style="display:none;">
+
+        <!-- Header -->
+        <div class="header">
+
+            <!-- Menu DropDown Button -->
+            <div class="dropdown">
+                <button class="dropbtn">☰</button>
+                <div class="dropdown-content">
+                    <a href="home.html" class="panelOptions" title="Home" target="_self">Home</a>
+                    <a href="userProfile.html" class="panelOptions" title="user profile" target="_self">My Account</a>
+                    <a href="about.html" class="panelOptions" title="About" target="_self">About</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=contactPerson@gmail.com"
+                        class="panelOptions" title="Contact" target="_blank">Contact</a>
+                    <a href="#" id="logout-button " class="panelOptions" role="button"          
+                        onclick="params.logOut()">Logout</a>
+                </div>
+            </div>
+
+            <!-- Search Button -->
+            <button class=" btn-search" id="search-button" title="Search" onclick="params.funcs.search()">
+                <span class="icon"></span><i class="fa fa-search" aria-hidden="true"></i></span></button>
+
+         
+
+        <!-- Fit To Center Button -->
+        <button class=" btn-center" id="fit-to-center-button" title="Fit to center"
+            onclick="params.funcs.fitToCenter()">
+            <span class="icon"><i class="fa fa-refresh" aria-hidden="true"></i>
+               </span></button>
+
+        <!-- Expand Button -->
+        <button class=" btn-expand" id="expand-button" title="Expand All" onclick="params.funcs.expandAll()">
+            <span class="icon"><i class="fa fa-arrows-alt" aria-hidden="true"></i>
+            </span></button>
+
+        <!-- Collapse Button -->
+        <button class=" btn-collapse" id="collapse-button" title="Collapse All" style="display: none;" onclick="params.funcs.fitToCenter()">  
+            <span class="icon"><i class="fa fa-compress" aria-hidden="true"></i></span></button>
+
+               <!-- Logged User Display Name -->
+               <div class="cUser">
+                <p id="displayName"></p>
+            </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="user-search-box">
+            <div class="input-box">
+                <div class="close-button-wrapper"><i onclick="params.funcs.closeSearchBox()" class="fa fa-times"
+                        aria-hidden="true"></i></div>
+                <div class="input-wrapper">
+                    <input type="text" class="search-input" placeholder="Search" />
+                    <div class="input-bottom-placeholder">By Firstname, Lastname, Tags</div>
+                </div>
+                <div></div>
+            </div>
+            <div class="result-box">
+                <div class="result-header"> RESULTS </div>
+                <div class="result-list">
+                    <div class="buffer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- blur1 div -->
+        <div class="blur1"></div>
+
+        <!-- View Profile Loader -->
+        <div id="profileLoader">
+            <p id="pLoader">Loading...</p>
+        </div>
+
+        <!-- PopUp for Add Spouse / Add Child -->
+        <div class="popup" id="popupId1" onclick="popupFunction()" style="display:none;">
+            <span class="popuptext1" id="myPopup">name field empty<span class="required requiredPopup">*</span></span>
+        </div>
+
+        <div class="popup" id="popupId2" onclick="popupFunction()" style="display:none;">
+            <span class="popuptext2" id="myPopup">name field empty<span class="required requiredPopup">*</span></span>
+        </div>
+
+        <!-- SVG Chart -->
+        <div id="svgChart"></div>
+
+    </div>
+
+    <script src="scripts/fireBaseLink.js"></script>
+    <script src="scripts/home.js"></script>
+    <!-- <script src="scripts/homeTestingLocal.js"></script> -->
+
+</body>
