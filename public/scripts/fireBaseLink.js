@@ -1,5 +1,4 @@
 var app_fireBase = {};
-
 // Your web app's Firebase configuration
 (function () {
     var firebaseConfig = {
